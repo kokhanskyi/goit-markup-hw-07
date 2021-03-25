@@ -21,9 +21,10 @@ footer .container {
   text-decoration: none;
   color: var(--logo-footer-color);
   -bottom: 20px;
-}
-.logo-footer > span {
-  color: var(--accent-color);
+
+  span {
+    color: var(--accent-color);
+  }
 }
 .address {
   font-size: 14px;
@@ -41,10 +42,11 @@ footer .container {
   padding-top: 10px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.communication-footer .link:hover,
-.communication-footer .link:focus {
-  color: var(--accent-color); /* Синий цвет #2196F3 */
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color); /* Синий цвет #2196F3 */
+  }
 }
 .footer-social {
   display: flex;
@@ -53,26 +55,33 @@ footer .container {
   height: 80px;
   margin-left: 70px;
   margin-top: 12px;
-}
-.footer-social p {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--primary-section-text-color);
-  margin-bottom: 20px;
+  p {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-section-text-color);
+    margin-bottom: 20px;
+  }
 }
 .footer-social-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.footer-social-list-item {
-  width: 44px;
-  height: 44px;
-  background-color: var(--footer-social-background-color);
-  border-radius: 50%;
+
+  &-item {
+    width: 44px;
+    height: 44px;
+    background-color: var(--footer-social-background-color);
+    border-radius: 50%;
+  }
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--logo-footer-color);
+  }
 }
 .footer-social-list-link {
   display: flex;
@@ -84,22 +93,14 @@ footer .container {
   margin-bottom: 30px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: var(--social-second-color);
+    background-color: var(--accent-color);
+  }
 }
 
-.footer-social-list-link:hover,
-.footer-social-list-link:focus {
-  fill: var(--social-second-color);
-}
-.footer-social-list-link:hover,
-.footer-social-list-link:focus {
-  background-color: var(--accent-color);
-}
-
-.footer-social-list-icon {
-  width: 20px;
-  height: 20px;
-  fill: var(--logo-footer-color);
-}
 /* =====footer-subscription====== */
 .footer-subscription-box {
   display: block;

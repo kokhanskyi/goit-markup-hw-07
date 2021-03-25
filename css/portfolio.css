@@ -107,17 +107,6 @@ body {
 
 /* ===========END=COMPONENTS===========*/
 /* =======================ШАПКА САЙТА========================= */
-/* Шапка сайта */
-.page-header {
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--header-background-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
 /* Логотип в шапке */
 .logo-header {
   display: inline-block;
@@ -131,29 +120,39 @@ body {
   margin-right: 93px;
 }
 
-.site-nav .link {
-  display: inline-block;
-  margin-right: 50px;
+.logo-header span {
+  color: var(--accent-color);
 }
 
+/* Шапка сайта */
 .header {
   border-bottom: 1px solid #ececec;
 }
 
-.logo-header > span {
-  color: var(--accent-color);
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-background-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
-/* Навигация */
-.page-header,
-.page-header nav,
-.site-nav,
-.communication-header {
+.page-header nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
   display: flex;
   align-items: center;
 }
 
 .site-nav .link {
+  display: inline-block;
+  margin-right: 50px;
   color: var(--title-text-color);
   /* Вторичный цвет текста #212121 */
   text-decoration: none;
@@ -161,6 +160,16 @@ body {
   padding: 25px 0;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-nav .link:hover, .site-nav .link:focus {
+  color: var(--accent-color);
+  /* Синий цвет #2196F3 */
+}
+
+/* Активная страница */
+.site-nav .current {
+  color: var(--accent-color);
 }
 
 .site-nav .current::after {
@@ -174,20 +183,18 @@ body {
   right: 0;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
-  color: var(--accent-color);
-  /* Синий цвет #2196F3 */
-}
-
-/* Активная страница */
-.site-nav .link.current {
-  color: var(--accent-color);
-}
-
 /* Коммуникация (шапка) */
+.communication-header {
+  display: flex;
+  align-items: center;
+}
+
 .communication-header li:not(:last-child) {
   margin-right: 30px;
+}
+
+.communication-header-icon {
+  margin: 10px;
 }
 
 .communication-header .link {
@@ -211,12 +218,7 @@ body {
   align-content: center;
 }
 
-.communication-header-icon {
-  margin: 10px;
-}
-
-.communication-header .link:hover,
-.communication-header .link:focus {
+.communication-header-container .link:hover, .communication-header-container .link:focus {
   color: var(--accent-color);
   /* Синий цвет #2196F3 */
 }
@@ -262,8 +264,7 @@ body {
   padding: 6px 22px;
 }
 
-.portfoleo-filters-list-item .portfoleo-button:hover,
-.portfoleo-filters-list-item .portfoleo-button:focus {
+.portfoleo-filters-list-item .portfoleo-button:hover, .portfoleo-filters-list-item .portfoleo-button:focus {
   color: var(--primary-section-text-color);
   background-color: var(--accent-color);
   box-shadow: 0px 4px 2px 0px #9e9da1;
@@ -288,11 +289,15 @@ body {
   overflow: hidden;
 }
 
-.portfoleo-project-list-item:hover {
+.container .portfoleo-project-list-item:hover {
   box-shadow: 0px 4px 4px 0px #bfbfbf, 0px 4px 4px 0px #f0f0f0, 1px 4px 6px 0px #d9d9d9;
   cursor: pointer;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container .portfoleo-project-list-item:hover .portfoleo-project-list-text {
+  transform: translateY(0);
 }
 
 .portfoleo-project-list-text {
@@ -314,10 +319,6 @@ body {
   overflow: hidden;
 }
 
-.portfoleo-project-list-item:hover .portfoleo-project-list-text {
-  transform: translateY(0);
-}
-
 .portfoleo-project-wapper {
   display: block;
   border: 1px solid #eeeeee;
@@ -336,7 +337,7 @@ body {
   margin-bottom: 10px;
 }
 
-.portfoleo-project p {
+.portfoleo-project-wapper h3 p {
   font-size: 16px;
   line-height: 1.87;
   margin: 10px auto;
@@ -368,7 +369,7 @@ footer .container {
   -bottom: 20px;
 }
 
-.logo-footer > span {
+.logo-footer span {
   color: var(--accent-color);
 }
 
@@ -390,8 +391,7 @@ footer .container {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.communication-footer .link:hover,
-.communication-footer .link:focus {
+.communication-footer .link:hover, .communication-footer .link:focus {
   color: var(--accent-color);
   /* Синий цвет #2196F3 */
 }
@@ -428,6 +428,12 @@ footer .container {
   border-radius: 50%;
 }
 
+.footer-social-list-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--logo-footer-color);
+}
+
 .footer-social-list-link {
   display: flex;
   width: 44px;
@@ -440,20 +446,9 @@ footer .container {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-social-list-link:hover,
-.footer-social-list-link:focus {
+.footer-social-list-link:hover, .footer-social-list-link:focus {
   fill: var(--social-second-color);
-}
-
-.footer-social-list-link:hover,
-.footer-social-list-link:focus {
   background-color: var(--accent-color);
-}
-
-.footer-social-list-icon {
-  width: 20px;
-  height: 20px;
-  fill: var(--logo-footer-color);
 }
 
 /* =====footer-subscription====== */

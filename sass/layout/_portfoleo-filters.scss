@@ -14,23 +14,24 @@
 .portfoleo-filters-list {
   display: flex;
   justify-content: center;
-}
 
-.portfoleo-filters-list-item {
-  margin-left: 8px;
-}
+  &-item {
+    margin-left: 8px;
 
-.portfoleo-filters-list-item .portfoleo-button {
-  border: none;
-  color: var(title-text-color);
-  background-color: var(second-background-colorolor);
-  border-radius: 4px;
-  padding: 6px 22px;
-}
-.portfoleo-filters-list-item .portfoleo-button:hover,
-.portfoleo-filters-list-item .portfoleo-button:focus {
-  color: var(--primary-section-text-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 4px 2px 0px #9e9da1;
-  cursor: pointer;
+    .portfoleo-button {
+      border: none;
+      color: var(title-text-color);
+      background-color: var(second-background-colorolor);
+      border-radius: 4px;
+      padding: 6px 22px;
+
+      &:hover,
+      &:focus {
+        color: var(--primary-section-text-color);
+        background-color: var(--accent-color);
+        box-shadow: 0px 4px 2px 0px #9e9da1;
+        cursor: pointer;
+      }
+    }
+  }
 }

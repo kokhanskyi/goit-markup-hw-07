@@ -10,39 +10,39 @@
     url(../images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-}
 
-.hero-title {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--primary-section-text-color);
-  max-width: 700px;
-  margin: 0 auto;
-  margin-bottom: 30px;
-}
+  &-title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--primary-section-text-color);
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  &-btn {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.87;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--color-text-btn);
+    background-color: var(--accent-color);
+    margin: 0 auto;
+    display: block;
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px 32px;
 
-.hero-btn {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.87;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: var(--color-text-btn);
-  background-color: var(--accent-color);
-  margin: 0 auto;
-  display: block;
-  border: 0px;
-  border-radius: 5px;
-  padding: 10px 32px;
-}
-.hero-btn:hover,
-.hero-btn:focus {
-  color: var(--color-text-btn);
-  background-color: var(--btn-hover-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &-btn:hover,
+    &-btn:focus {
+      color: var(--color-text-btn);
+      background-color: var(--btn-hover-color);
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
 }
