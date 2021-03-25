@@ -1,0 +1,113 @@
+/* =======================ШАПКА САЙТА========================= */
+/* Шапка сайта */
+.page-header {
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-background-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+/* Логотип в шапке */
+
+.logo-header {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--logo-header-color); /* Черный цвет логотипа #000000 */
+  text-decoration: none;
+  margin-right: 93px;
+}
+.site-nav .link {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+.logo-header > span {
+  color: var(--accent-color);
+}
+
+/* Навигация */
+
+.page-header,
+.page-header nav,
+.site-nav,
+.communication-header {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav .link {
+  color: var(--title-text-color); /* Вторичный цвет текста #212121 */
+  text-decoration: none;
+  position: relative;
+  padding: 25px 0;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.site-nav .current::after {
+  content: '';
+  height: 4px;
+  width: 100%;
+  background-color: var(--accent-color);
+  display: block;
+  position: absolute;
+  top: calc(100% - 4px);
+  right: 0;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color); /* Синий цвет #2196F3 */
+}
+
+/* Активная страница */
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+/* Коммуникация (шапка) */
+
+.communication-header li:not(:last-child) {
+  margin-right: 30px;
+}
+.communication-header .link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: currentColor;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.communication-header-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.communication-header-container .link {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.communication-header-icon {
+  margin: 10px;
+}
+.communication-header .link:hover,
+.communication-header .link:focus {
+  color: var(--accent-color);
+  /* Синий цвет #2196F3 */
+}
+.link svg {
+  fill: var(--regular-client-link-primary-color);
+}
+.link:hover svg {
+  fill: var(--accent-color);
+}
+
+/* ================================================ */
